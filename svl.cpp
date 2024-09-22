@@ -1,7 +1,7 @@
 #include <iostream>
 using namespace std;
 
-// program for LARGEST element in array
+// program for SMALLEST & LARGEST element in array
 
 int largest_element(int n, int array[]) {
 
@@ -23,9 +23,14 @@ int smallest_element(int n, int array[]) {
 
 int smallest = array[0];
 
-    if (n < 1) {return 0;}
+    if (n < 1) {return 0;
+    }
 
-for (int i = 0; i < n; i++) {}
+for (int j = 0; j < n; j++) {
+    if (array[0] > array[j]) {
+        smallest = array[j];
+    }
+}
 
     return smallest;
 
@@ -42,8 +47,10 @@ int main () {
         cin >> array[i]; 
     }
     
-    cout << *(array) << endl;
-cout << "Ur largest element is: " << largest_element(4,array) << endl;
+    int minVal = smallest_element(num,array);
+    int maxVal = largest_element(num,array);
+cout << "Ur smolest element is: " << minVal << endl;
+cout << "Ur largest element is: " << maxVal << endl;
 
     return 0;
 }
