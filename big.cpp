@@ -5,15 +5,30 @@ using namespace std;
 
 int largest_element(int n, int array[]) {
 
-int largest;
+int largest = array[0];
 
-for (int i = 1; i < n; i++) {
-    if (array[0] < array[i]) {
-        array[i] == largest;
-    }
+if (n < 1) {
+    return 0;
 }
 
+for (int i = 0; i < n; i++) {
+    if (array[0] < array[i]) {
+        largest = array[i];
+    }
+}
     return largest;
+}
+
+int smallest_element(int n, int array[]) {
+
+int smallest = array[0];
+
+    if (n < 1) {return 0;}
+
+for (int i = 0; i < n; i++) {}
+
+    return smallest;
+
 }
 
 int main () {
@@ -21,7 +36,7 @@ int main () {
     cout << "How many elements are in ur array? ";
     cin >> num;
 
-   int array[4];
+   int array[num];
     for (int i = 0; i < num; i++) {
         cout << "Element " << i+1 << endl;
         cin >> array[i]; 
