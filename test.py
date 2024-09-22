@@ -1,2 +1,4 @@
-print("hello, welcome!")
+import numpy
+import matplotlib
 
+print("hello, welcome!")
